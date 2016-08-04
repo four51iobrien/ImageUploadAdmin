@@ -1,0 +1,14 @@
+{
+  "appname": "ImageUploadAdmin",
+  "scope": "FullAccess",
+  "clientid": "9F43C9D2-6BA0-4EA5-8AD5-F9E5C424F494",
+  "buyerid": null,
+  "environment": "prod",
+  "anonymous": false,
+  "base": {
+    "left":true,
+    "right":false,
+    "top":true,
+    "bottom":false
+  }
+}
