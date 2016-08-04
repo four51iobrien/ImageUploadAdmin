@@ -1,21 +1,35 @@
 <h3 class="page-header">
-    <b>Edit Product:</b> {{productEdit.productName}}
+    <b>Edit Image Record:</b> {{productEdit.productName}}
 </h3>
 <form name="EditForm" ng-submit="productEdit.Submit()" novalidate>
     <div class="row">
         <div class="form-group col-sm-6">
-            <label for="productIDInput">Product ID</label>
+            <label for="productIDInput">Image ID</label>
             <input id="productIDInput" type="text" class="form-control" pattern="([A-Za-z0-9\-\_]+)" pattern-err-type="ID_Name" ng-model="productEdit.product.ID" ng-required="true"/>
         </div>
         <div class="col-sm-6 form-group">
-            <label for="productNameInput">Product Name</label>
+            <label for="productNameInput">Image Name</label>
             <input id="productNameInput" type="text" class="form-control" ng-model="productEdit.product.Name" ng-required="true"/>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-12 form-group">
-            <label for="productDescriptionInput">Description</label>
+            <label for="productDescriptionInput">Affiliate Name</label>
             <textarea id="productDescriptionInput" type="text" class="form-control" ng-model="productEdit.product.Description"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="productStatusInput">Status</label>
+            <select id="productStatusInput" class="form-control" ng-model="productCreate.product.xp.Status" ng-required="true">
+                <option value="Submitted">Submitted</option>
+                <option value="Processing">Processing</option>
+                <option value="Complete">Complete</option>
+            </select>
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="productEmailInput">Email address</label>
+            <input id="productEmailInput" type="text" class="form-control" ng-model="productCreate.product.xp['Email']" />
         </div>
     </div>
     <div class="row">
@@ -23,12 +37,12 @@
             <label for="productQuantityMultInput">Quantity Multiplier</label>
             <input id="productQuantityMultInput" type="number" pattern="^[0-9]*[1-9][0-9]*$" pattern-err-type="positiveInteger" class="form-control" ng-model="productEdit.product.QuantityMultiplier" ng-required="true"/>
         </div>
-        <div class="form-group col-sm-6">
+ <!--       <div class="form-group col-sm-6">
             <label for="productShipWeightInput">Ship Weight</label>
             <input id="productShipWeightInput" type="number" step="any" class="form-control" ng-model="productEdit.product.ShipWeight"/>
-        </div>
+        </div>  -->
     </div>
-    <div class="row">
+<!--    <div class="row">
         <div class="col-sm-6 form-group">
             <label for="productTypeInput">Product Type</label>
             <select id="productTypeInput" class="form-control" ng-model="productEdit.product.Type" ng-required="true">
@@ -41,8 +55,8 @@
             <label for="productInventoryInput">Inventory Notification Point</label>
             <input id="productInventoryInput" type="number" class="form-control" ng-model="productEdit.product.InventoryNotificationPoint"/>
         </div>
-    </div>
-    <div class="panel panel-default col-sm-6">
+    </div> -->
+<!--    <div class="panel panel-default col-sm-6">
         <div class="panel-body">
             <div class="row">
                 <div class="form-group col-sm-6">
@@ -82,7 +96,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="col-sm-6">
         <ordercloud-file-upload model="productEdit.product" keyname="image" label="Image" extensions="jpg, png, gif, jpeg, tiff"></ordercloud-file-upload>
     </div>

@@ -7,7 +7,7 @@
         </ul>
     </nav>
     <nav ng-if="base.catalogItems.length">
-        <h4 class="text-primary"><b>Organization</b></h4>
+        <h4 class="text-primary"><b>____________</b></h4>
         <ul class="nav nav-pills nav-stacked">
             <li role="presentation" ng-repeat="item in base.catalogItems | occomponents | orderBy:'Display'" ui-sref-active="active">
                 <a href="" ui-sref="{{item.StateRef}}">{{item.Display}}</a>
@@ -15,7 +15,7 @@
         </ul>
     </nav>
     <nav ng-if="base.organizationItems.length">
-        <h4 class="text-primary"><b>Buyer Company</b></h4>
+        <h4 class="text-primary"><b>George FSI Company</b></h4>
         <ordercloud-select-buyer></ordercloud-select-buyer>
         <ul class="nav nav-pills nav-stacked">
             <li role="presentation" ng-repeat="item in base.organizationItems | occomponents | orderBy:'Display'" ui-sref-active="active">

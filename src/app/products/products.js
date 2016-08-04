@@ -15,7 +15,7 @@ function ProductsConfig($stateProvider) {
             controller: 'ProductsCtrl',
             controllerAs: 'products',
             url: '/products?from&to&search&page&pageSize&searchOn&sortBy&filters',
-            data: {componentName: 'Products'},
+            data: {componentName: 'Images'},
             resolve: {
                 Parameters: function($stateParams, OrderCloudParameters) {
                     return OrderCloudParameters.Get($stateParams);

@@ -1,7 +1,7 @@
 <article id="COMPONENT_Products" ui-view class="container-fluid">
     <div class="page-header">
         <button type="button" class="btn btn-success pull-right" ui-sref=".create"><i class="fa fa-plus-circle"></i> Create New</button>
-        <h3>Products</h3>
+        <h3>1-800 Flowers Image Upload</h3>
     </div>
 
     <!--====== SEARCH/FILTERS ======-->
@@ -51,18 +51,19 @@
             <tr>
                 <th scope="col">
                     <a href="#" role="button" ng-click="products.updateSort('ID')">
-                        ID
+                        Image ID
                         <i class="fa fa-caret-down" ng-show="products.parameters.sortBy == 'ID'"></i>
                         <i class="fa fa-caret-up" ng-show="products.parameters.sortBy == '!ID'"></i>
                     </a>
                 </th>
                 <th>
                     <a href="#" role="button" ng-click="products.updateSort('Name')">
-                        Name
+                        Image Name
                         <i class="fa fa-caret-down" ng-show="products.parameters.sortBy == 'Name'"></i>
                         <i class="fa fa-caret-up" ng-show="products.parameters.sortBy == '!Name'"></i>
                     </a>
                 </th>
+                <th class="text-left">Affiliate</th>
                 <th class="text-center">Active</th>
                 <th></th>
             </tr>
@@ -71,12 +72,13 @@
             <tr ng-repeat="product in products.list.Items">
                 <th scope="row">{{product.ID}}</th>
                 <td data-title="Name">{{product.Name}}</td>
+                <td data-title="Affiliate Name">{{product.Description}}</td>
                 <td class="text-center" data-title="Active">
                     <i class="fa fa-circle" aria-hidden="true" ng-class="{'active':product.Active}"></i>
                 </td>
                 <td class="actions-cell">
                     <button ui-sref=".edit({productid:product.ID})" class="btn btn-default btn-sm">Edit</button>
-                    <button ui-sref=".assignments({productid:product.ID})" class="btn btn-default btn-sm">Assign</button>
+<!--                    <button ui-sref=".assignments({productid:product.ID})" class="btn btn-default btn-sm">Assign</button> -->
                 </td>
             </tr>
             </tbody>
